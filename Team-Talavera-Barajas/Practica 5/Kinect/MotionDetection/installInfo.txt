@@ -1,0 +1,105 @@
+
+Kinect OpenNI/NITE Installation on Windows
+==========================================
+
+For more details, read section 3 of Chapter 2.
+
+From the website:
+
+  Kinect Open Source Programming Secrets
+  http://fivedots.coe.psu.ac.th/~ad/kinect/
+
+  Dr. Andrew Davison
+  Dept. of Computer Engineering
+  Prince of Songkla University
+  Hat yai, Songkhla 90112, Thailand
+  E-mail: ad@fivedots.coe.psu.ac.th
+
+
+
+------------------------------------------------
+1.  Clean Up First
+
+Useful freeware tools for cleaning Windows:
+- Revo Uninstaller (http://www.revouninstaller.com/)
+- CCleaner (http://www.piriform.com/CCLEANER)
+
+- delete C:\Program Files\PrimeSense and C:\Program Files\OpenNI
+
+- uninstall drivers that mention "Kinect" or "Xbox"
+
+
+------------------------------------------------
+2.  Download three Packages
+
+*	 the Kinect driver, SensorKinect
+   (https://github.com/avin2/SensorKinect/)
+        - select stable or unstable branch; download
+        - unzip; select correct msi; read "README" and "CHANGES"
+        - don't install yet
+
+*	 OpenNI, **development version**
+   (http://www.openni.org/downloadfiles/opennimodules/)
+        - in "OpenNI Binaries"
+        - select stable or unstable branch; download
+
+* 	NITE, **development version**
+   (http://www.openni.org/downloadfiles/opennimodules/)
+        - in "OpenNI Compliant Middleware Binaries"
+        - select stable or unstable branch; download
+
+
+------------------------------------------------
+3. Installation
+
+Install in the order:
+    1.	OpenNI
+    2.	SensorKinect driver
+    3.	NITE
+- afterwards, check C:\Program Files\OpenNI\ and C:\Program Files\PrimeSense\
+
+- install three hardware drivers (for motor, audio, and camera)
+    - plug in Kinect to PC *and* to the mains
+    - load drivers from C:\Program Files\PrimeSense\SensorKinect\Driver
+- afterwards, check the Device Manager
+
+- delete OpenNI's Java CLASSPATH environment variable
+
+
+------------------------------------------------
+4.  Edit four XML Configuration Files
+
+In C:\Program Files\PrimeSense\NITE\Data:
+ - Sample-Scene.xml
+ - Sample-Training.xml
+ - Sample-User.xml)
+
+In C:\Program Files\OpenNI\Data
+ - SampleConfig.xml
+
+To all XML files:
+  - add license:
+     <License vendor="PrimeSense" key="0KOIk2JeIBYClPWVnMoRKn5cdY4="/>
+
+  - add <MapOutputMode> attribute to <Configuration> subterms:
+     <MapOutputMode xRes="640" yRes="480" FPS="30"/>
+
+(Look at SampleConfig.xml in this directory for examples 
+ of these changes.)
+
+
+------------------------------------------------
+5.  Test OpenNI and NITE
+
+In C:\Program Files\OpenNI\Samples\Bin\Release, run:
+  - NiSimpleRead.exe
+  - NiSimpleViewer.exe
+  - NiViewer.exe,
+  - NiUserTracker.exe. 
+
+In C:\Program Files\PrimeSense\NITE\Samples\Bin\Release, run:
+  - Sample-Boxes.exe
+
+
+----------------------------
+Last updated: 15th September 2011
