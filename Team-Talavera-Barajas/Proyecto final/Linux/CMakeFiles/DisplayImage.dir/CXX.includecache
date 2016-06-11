@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abarajase/repos/interfaz/Team-Talavera-Barajas/Proyecto final/Linux/main.cpp
+opencv2/highgui/highgui.hpp
+/home/abarajase/repos/interfaz/Team-Talavera-Barajas/Proyecto final/Linux/opencv2/highgui/highgui.hpp
+opencv2/imgproc/imgproc.hpp
+/home/abarajase/repos/interfaz/Team-Talavera-Barajas/Proyecto final/Linux/opencv2/imgproc/imgproc.hpp
+iostream
+-
+stdio.h
+-
+
