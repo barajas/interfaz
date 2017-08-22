@@ -1,8 +1,8 @@
 # Practicas
 
-Practica #3 - Detector de 3 colores
-Practica #4 - Reconocimiento de caras
-Practica #5 - WebServer alarma con kinect en la PC
+1. Practica #3 - Detector de 3 colores
+2. Practica #4 - Reconocimiento de caras
+3. Practica #5 - WebServer alarma con kinect en la PC
 
 # Proyecto final
 
